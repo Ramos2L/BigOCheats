@@ -1,5 +1,7 @@
 import 'package:big_memo/view/sobre/sobre.dart';
+import 'package:big_memo/view/termos/termos.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Detalhes extends StatelessWidget {
   const Detalhes({Key? key}) : super(key: key);
@@ -74,7 +76,12 @@ class Detalhes extends StatelessWidget {
               height: 5,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Termos()),
+                );
+              },
               child: Card(
                 clipBehavior: Clip.antiAlias,
                 child: Column(
@@ -87,7 +94,7 @@ class Detalhes extends StatelessWidget {
                             'Termos e Política de Privacidade',
                             style: TextStyle(color: Colors.black),
                           ),
-                          Icon(Icons.call_made_outlined)
+                          Icon(Icons.arrow_forward)
                         ],
                       ),
                     ),
@@ -99,7 +106,14 @@ class Detalhes extends StatelessWidget {
               height: 5,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                const url = 'https://t.me/+4PpFJ37tZ8IwN2Nh';
+                if (await canLaunchUrl(Uri.parse(url))) {
+                  await launchUrl(Uri.parse(url));
+                } else {
+                  debugPrint("Error ao consultar Url");
+                }
+              },
               child: Card(
                 clipBehavior: Clip.antiAlias,
                 child: Column(
@@ -133,7 +147,14 @@ class Detalhes extends StatelessWidget {
               height: 5,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                const url = 'https://discord.gg/wNrBjhQH';
+                if (await canLaunchUrl(Uri.parse(url))) {
+                  await launchUrl(Uri.parse(url));
+                } else {
+                  debugPrint("Error ao consultar Url");
+                }
+              },
               child: Card(
                 clipBehavior: Clip.antiAlias,
                 child: Column(
@@ -158,7 +179,14 @@ class Detalhes extends StatelessWidget {
               height: 5,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                const url = 'https://t.me/+4PpFJ37tZ8IwN2Nh';
+                if (await canLaunchUrl(Uri.parse(url))) {
+                  await launchUrl(Uri.parse(url));
+                } else {
+                  debugPrint("Error ao consultar Url");
+                }
+              },
               child: Card(
                 clipBehavior: Clip.antiAlias,
                 child: Column(
@@ -192,7 +220,14 @@ class Detalhes extends StatelessWidget {
               height: 5,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                const url = 'https://github.com/Ramos2L';
+                if (await canLaunchUrl(Uri.parse(url))) {
+                  await launchUrl(Uri.parse(url));
+                } else {
+                  debugPrint("Error ao consultar Url");
+                }
+              },
               child: Card(
                 clipBehavior: Clip.antiAlias,
                 child: Column(
