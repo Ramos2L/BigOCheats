@@ -1,12 +1,12 @@
-import 'package:big_memo/model/quick_sort_model.dart';
+import 'package:big_memo/model/couting_sort_model.dart';
 import 'package:big_memo/widget/complexy.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class QuickSort extends StatelessWidget {
-  QuickSort({Key? key}) : super(key: key);
+class CountingSort extends StatelessWidget {
+  CountingSort({Key? key}) : super(key: key);
 
-  final quickModel = QuickSortModel('');
+  final coutingModel = CoutingSortModel('', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +28,10 @@ class QuickSort extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Quick Sort',
+                  'Counting Sort',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
-                ),
-                const SizedBox(
-                  height: 15,
                 ),
                 const SizedBox(
                   height: 10,
@@ -49,8 +46,9 @@ class QuickSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.orange,
-                        border: Border.all(color: Colors.orange, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -62,7 +60,7 @@ class QuickSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Ω(n log(n))",
+                        "Ω(n+k)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -73,8 +71,9 @@ class QuickSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.orange,
-                        border: Border.all(color: Colors.orange, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -86,7 +85,7 @@ class QuickSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n log(n))",
+                        "Θ(n+k)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -97,8 +96,9 @@ class QuickSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.redAccent,
-                        border: Border.all(color: Colors.redAccent, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -110,7 +110,7 @@ class QuickSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(n^2)",
+                        "Θ(n+k)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -124,7 +124,7 @@ class QuickSort extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  quickModel.texto,
+                  coutingModel.texto,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -132,18 +132,13 @@ class QuickSort extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif'),
-                const SizedBox(
-                  height: 15,
-                ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://flutter.dev';
+                    const url = 'https://en.wikipedia.org/wiki/Counting_sort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
-                      print("object");
+                      debugPrint("Error ao consultar Url");
                     }
                   },
                   child: Card(
@@ -155,7 +150,7 @@ class QuickSort extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Quick Sort saiba mais',
+                                'Counting Sort saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

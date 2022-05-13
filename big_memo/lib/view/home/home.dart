@@ -1,6 +1,6 @@
 import 'package:big_memo/controller/home_controller.dart';
 import 'package:big_memo/view/algoritmosOrdenacao/bubble_sort.dart';
-import 'package:big_memo/view/algoritmosOrdenacao/couting_sort.dart';
+import 'package:big_memo/view/algoritmosOrdenacao/counting_sort.dart';
 import 'package:big_memo/view/algoritmosOrdenacao/cube_sort.dart';
 import 'package:big_memo/view/algoritmosOrdenacao/heap_sort.dart';
 import 'package:big_memo/view/algoritmosOrdenacao/insertion_sort.dart';
@@ -93,7 +93,7 @@ class Home extends StatelessWidget {
               height: 10,
             ),
             const Text(
-              'Algoritmos de Ordenação',
+              'Operações em Estrutura de Dados',
               style: TextStyle(
                   color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
               textAlign: TextAlign.left,
@@ -104,7 +104,6 @@ class Home extends StatelessWidget {
             HorizontalCardPager(
               onPageChanged: (page) {
                 if (page == 1) {
-                  print("object");
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const splash()),
@@ -118,7 +117,7 @@ class Home extends StatelessWidget {
               height: 10,
             ),
             const Text(
-              'Operações em Estrutura de Dados',
+              'Algoritmos de Ordenação',
               style: TextStyle(
                   color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
               textAlign: TextAlign.left,
@@ -128,49 +127,49 @@ class Home extends StatelessWidget {
             ),
             HorizontalCardPager(
               onPageChanged: (page) {
-                homeController.controlePageEstruturaDados(page);
-                if (page == 1) {
+                // homeController.controlePageEstruturaDados(page);
+
+                if (page == 0) {
+                  debugPrint('0');
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const QuickSort()),
+                    MaterialPageRoute(builder: (context) => QuickSort()),
+                  );
+                } else if (page == 1) {
+                  debugPrint('1');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MergeSort()),
                   );
                 } else if (page == 2) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const MergeSort()),
+                    MaterialPageRoute(builder: (context) => HeapSort()),
                   );
                 } else if (page == 3) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HeapSort()),
+                    MaterialPageRoute(builder: (context) => BubbleSort()),
                   );
                 } else if (page == 4) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const BubbleSort()),
+                    MaterialPageRoute(builder: (context) => InsertionSort()),
                   );
                 } else if (page == 5) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const InsertionSort()),
+                    MaterialPageRoute(builder: (context) => SelectionSort()),
                   );
                 } else if (page == 6) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const SelectionSort()),
-                  );
-                } else if (page == 6) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const CountingSort()),
+                    MaterialPageRoute(builder: (context) => CountingSort()),
                   );
                 } else if (page == 7) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const CubeSort()),
+                    MaterialPageRoute(builder: (context) => CubeSort()),
                   );
                 }
               },

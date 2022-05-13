@@ -1,3 +1,4 @@
+import 'package:big_memo/view/sobre/sobre.dart';
 import 'package:flutter/material.dart';
 
 class Detalhes extends StatelessWidget {
@@ -12,7 +13,7 @@ class Detalhes extends StatelessWidget {
           style: TextStyle(),
         ),
         leading: IconButton(
-          icon: const Icon(Icons.clear, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: const Color(0xFF262a38),
@@ -34,7 +35,12 @@ class Detalhes extends StatelessWidget {
               height: 5,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Sobre()),
+                );
+              },
               child: Card(
                 clipBehavior: Clip.antiAlias,
                 child: Column(
