@@ -140,7 +140,7 @@ class MergeSort extends StatelessWidget {
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
-                      print("object");
+                      debugPrint("Error ao consultar Url");
                     }
                   },
                   child: Card(

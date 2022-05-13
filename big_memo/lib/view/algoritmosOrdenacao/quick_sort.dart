@@ -139,7 +139,7 @@ class QuickSort extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://flutter.dev';
+                    const url = 'https://en.wikipedia.org/wiki/Quicksort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {

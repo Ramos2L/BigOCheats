@@ -1,5 +1,4 @@
 import 'package:big_memo/view/home/home.dart';
-import 'package:big_memo/view/splash/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {

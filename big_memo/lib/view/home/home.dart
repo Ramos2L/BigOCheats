@@ -11,7 +11,7 @@ import 'package:big_memo/view/detalhes/detalhes.dart';
 import 'package:big_memo/view/home/items_algoritmos_ordenacao.dart';
 import 'package:big_memo/view/home/items_estrutura_dados.dart';
 import 'package:big_memo/view/introducao/introducao.dart';
-import 'package:big_memo/view/splash/splash.dart';
+import 'package:big_memo/view/opEstruturasDados/array.dart';
 import 'package:flutter/material.dart';
 import 'package:horizontal_card_pager/card_item.dart';
 import 'package:horizontal_card_pager/horizontal_card_pager.dart';
@@ -103,10 +103,17 @@ class Home extends StatelessWidget {
             ),
             HorizontalCardPager(
               onPageChanged: (page) {
-                if (page == 1) {
+                if (page == 0 ||
+                    page == 1 ||
+                    page == 2 ||
+                    page == 3 ||
+                    page == 4 ||
+                    page == 5 ||
+                    page == 6 ||
+                    page == 7) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const splash()),
+                    MaterialPageRoute(builder: (context) => const Array()),
                   );
                 }
               },
