@@ -1,5 +1,7 @@
+import 'package:big_memo/controller/home_controller.dart';
 import 'package:big_memo/view/home/home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,20 +12,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Big Memo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => HomeControllerSort()),
+        ChangeNotifierProvider(create: (_) => HomeControllerEstruturaDados()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Big Memo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const Home(),
+          '/home': (context) => const Home(),
+          '/opEstruturasDados': (context) => const Home(),
+          '/algoritmosOrdenacao': (context) => const Home(),
+          '/detalhes': (context) => const Home(),
+        },
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => Home(),
-        '/home': (context) => Home(),
-        '/opEstruturasDados': (context) => Home(),
-        '/algoritmosOrdenacao': (context) => Home(),
-        '/detalhes': (context) => Home(),
-      },
     );
   }
 }

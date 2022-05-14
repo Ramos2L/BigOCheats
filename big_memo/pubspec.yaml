@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   horizontal_card_pager: ^1.1.1
   url_launcher: ^6.1.2
+  provider: ^6.0.2
 
 dev_dependencies:
   flutter_test:
