@@ -19,6 +19,8 @@ https://drive.google.com/drive/folders/1YGSOLZKcwQX1XB5bgHdk0Cd3khVOlDaa?usp=sha
 
 <h1 align="center"> 🦾 Telas Demonstração </h1>
 <div align="center">
+  <img height="600em" src="https://user-images.githubusercontent.com/58201578/168449487-de624284-675e-47e5-851b-78f044d3afaa.gif"/>
+  <br/>
   <img height="600em" src="https://user-images.githubusercontent.com/58201578/168444684-2b5562ea-cc9d-477b-9dea-50fac817f13e.png"/>
   <img height="600em" src="https://user-images.githubusercontent.com/58201578/168444689-080abf91-bf8a-49dc-82c7-f3a09aa53c9e.png"/>
   <br/>
