@@ -1,4 +1,3 @@
-import 'package:big_memo/src/view/sobre/sobre.dart';
 import 'package:big_memo/src/view/termos/termos.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
