@@ -1,12 +1,12 @@
-import 'package:big_memo/model/insertion_sort_model.dart';
-import 'package:big_memo/widget/complexy.dart';
+import 'package:big_memo/src/model/bubble_sort_model.dart';
+import 'package:big_memo/src/widget/complexy.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class InsertionSort extends StatelessWidget {
-  InsertionSort({Key? key}) : super(key: key);
+class BubbleSort extends StatelessWidget {
+  BubbleSort({Key? key}) : super(key: key);
 
-  final insertionModel = InsertionSortModel('');
+  final bubbleModel = BubbleSortModel('');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class InsertionSort extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Insertion Sort',
+                  'Bubble Sort',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -121,7 +121,7 @@ class InsertionSort extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  insertionModel.texto,
+                  bubbleModel.texto,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -130,13 +130,13 @@ class InsertionSort extends StatelessWidget {
                   height: 15,
                 ),
                 Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif'),
+                    'https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif'),
                 const SizedBox(
                   height: 15,
                 ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://en.wikipedia.org/wiki/Insertion_sort';
+                    const url = 'https://en.wikipedia.org/wiki/Bubble_sort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -152,7 +152,7 @@ class InsertionSort extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Insertion Sort saiba mais',
+                                'Bubble Sort saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

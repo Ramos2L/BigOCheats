@@ -1,12 +1,12 @@
-import 'package:big_memo/model/btree_model.dart';
-import 'package:big_memo/widget/complexy_ed.dart';
+import 'package:big_memo/src/model/stack_model.dart';
+import 'package:big_memo/src/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class BTree extends StatelessWidget {
-  BTree({Key? key}) : super(key: key);
+class StackPage extends StatelessWidget {
+  StackPage({Key? key}) : super(key: key);
 
-  final btreeModel = BTreeModel('');
+  final stackModel = StackModel('', '', '', '', '', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class BTree extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'B-Tree',
+                  'Stack',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,8 +46,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -59,7 +60,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "Θ(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -70,8 +71,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -83,7 +85,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "Θ(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -94,8 +96,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -107,7 +110,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "Θ(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -118,8 +121,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -131,7 +135,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "Θ(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -154,8 +158,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -167,7 +172,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "O(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -178,8 +183,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -191,7 +197,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "O(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -202,8 +208,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -215,7 +222,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "O(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -226,8 +233,9 @@ class BTree extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -239,7 +247,7 @@ class BTree extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "O(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -253,7 +261,55 @@ class BTree extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  btreeModel.texto1,
+                  stackModel.texto1,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto2,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto3,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto1,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto5,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto6,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -263,7 +319,8 @@ class BTree extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://en.wikipedia.org/wiki/B-tree';
+                    const url =
+                        'https://en.wikipedia.org/wiki/Stack_(abstract_data_type)';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -279,7 +336,7 @@ class BTree extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'B-Tree saiba mais',
+                                'Stack saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

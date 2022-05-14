@@ -1,12 +1,12 @@
-import 'package:big_memo/model/merge_sort_model.dart';
-import 'package:big_memo/widget/complexy.dart';
+import 'package:big_memo/src/model/cube_sort_model.dart';
+import 'package:big_memo/src/widget/complexy.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class MergeSort extends StatelessWidget {
-  MergeSort({Key? key}) : super(key: key);
+class CubeSort extends StatelessWidget {
+  CubeSort({Key? key}) : super(key: key);
 
-  final mergeModel = MergeSortModel('');
+  final cubeModel = CubeSortModel('');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class MergeSort extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Merge Sort',
+                  'Cube Sort',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,8 +46,9 @@ class MergeSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.orange,
-                        border: Border.all(color: Colors.orange, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -59,7 +60,7 @@ class MergeSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Ω(n log(n))",
+                        "Ω(n)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -107,7 +108,7 @@ class MergeSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(n log(n))",
+                        "Θ(n log(n))",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -121,7 +122,7 @@ class MergeSort extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  mergeModel.texto,
+                  cubeModel.texto,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -129,14 +130,9 @@ class MergeSort extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif'),
-                const SizedBox(
-                  height: 15,
-                ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://en.wikipedia.org/wiki/Merge_sort';
+                    const url = 'https://en.wikipedia.org/wiki/Cubesort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -152,7 +148,7 @@ class MergeSort extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Merge Sort saiba mais',
+                                'Cube Sort saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

@@ -1,12 +1,12 @@
-import 'package:big_memo/model/stack_model.dart';
-import 'package:big_memo/widget/complexy_ed.dart';
+import 'package:big_memo/src/model/btree_model.dart';
+import 'package:big_memo/src/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class StackPage extends StatelessWidget {
-  StackPage({Key? key}) : super(key: key);
+class BTree extends StatelessWidget {
+  BTree({Key? key}) : super(key: key);
 
-  final stackModel = StackModel('', '', '', '', '', '');
+  final btreeModel = BTreeModel('');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class StackPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Stack',
+                  'B-Tree',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,9 +46,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -60,7 +59,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -71,9 +70,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -85,7 +83,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -96,9 +94,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -110,7 +107,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(1)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -121,9 +118,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -135,7 +131,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(1)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -158,9 +154,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -172,7 +167,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(n)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -183,9 +178,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -197,7 +191,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(n)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -208,9 +202,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -222,7 +215,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(1)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -233,9 +226,8 @@ class StackPage extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -247,7 +239,7 @@ class StackPage extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(1)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -261,55 +253,7 @@ class StackPage extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  stackModel.texto1,
-                  style: const TextStyle(
-                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-                  textAlign: TextAlign.justify,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  stackModel.texto2,
-                  style: const TextStyle(
-                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-                  textAlign: TextAlign.justify,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  stackModel.texto3,
-                  style: const TextStyle(
-                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-                  textAlign: TextAlign.justify,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  stackModel.texto1,
-                  style: const TextStyle(
-                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-                  textAlign: TextAlign.justify,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  stackModel.texto5,
-                  style: const TextStyle(
-                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-                  textAlign: TextAlign.justify,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  stackModel.texto6,
+                  btreeModel.texto1,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -319,8 +263,7 @@ class StackPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    const url =
-                        'https://en.wikipedia.org/wiki/Stack_(abstract_data_type)';
+                    const url = 'https://en.wikipedia.org/wiki/B-tree';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -336,7 +279,7 @@ class StackPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Stack saiba mais',
+                                'B-Tree saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

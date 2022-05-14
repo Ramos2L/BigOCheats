@@ -1,12 +1,12 @@
-import 'package:big_memo/model/cube_sort_model.dart';
-import 'package:big_memo/widget/complexy.dart';
+import 'package:big_memo/src/model/couting_sort_model.dart';
+import 'package:big_memo/src/widget/complexy.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CubeSort extends StatelessWidget {
-  CubeSort({Key? key}) : super(key: key);
+class CountingSort extends StatelessWidget {
+  CountingSort({Key? key}) : super(key: key);
 
-  final cubeModel = CubeSortModel('');
+  final coutingModel = CoutingSortModel('', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class CubeSort extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Cube Sort',
+                  'Counting Sort',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,9 +46,9 @@ class CubeSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
+                        color: Colors.greenAccent,
                         border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -60,7 +60,7 @@ class CubeSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Ω(n)",
+                        "Ω(n+k)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -71,8 +71,9 @@ class CubeSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.orange,
-                        border: Border.all(color: Colors.orange, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -84,7 +85,7 @@ class CubeSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n log(n))",
+                        "Θ(n+k)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -95,8 +96,9 @@ class CubeSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.orange,
-                        border: Border.all(color: Colors.orange, width: 3.0),
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -108,7 +110,7 @@ class CubeSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n log(n))",
+                        "Θ(n+k)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -122,7 +124,7 @@ class CubeSort extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  cubeModel.texto,
+                  coutingModel.texto,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -132,7 +134,7 @@ class CubeSort extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://en.wikipedia.org/wiki/Cubesort';
+                    const url = 'https://en.wikipedia.org/wiki/Counting_sort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -148,7 +150,7 @@ class CubeSort extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Cube Sort saiba mais',
+                                'Counting Sort saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

@@ -1,12 +1,12 @@
-import 'package:big_memo/model/lista_ligada_model.dart';
-import 'package:big_memo/widget/complexy_ed.dart';
+import 'package:big_memo/src/model/array_model.dart';
+import 'package:big_memo/src/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ListaLigada extends StatelessWidget {
-  ListaLigada({Key? key}) : super(key: key);
+class Array extends StatelessWidget {
+  Array({Key? key}) : super(key: key);
 
-  final listaLigadaModel = ListaLigadaModel('', '', '');
+  final arrayModel = ArrayModel('', '', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class ListaLigada extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Lista Ligada',
+                  'Array',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,6 +46,31 @@ class ListaLigada extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
+                        color: Colors.greenAccent,
+                        border:
+                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "Θ(1)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
                         color: Colors.yellowAccent,
                         border:
                             Border.all(color: Colors.yellowAccent, width: 3.0),
@@ -96,8 +121,9 @@ class ListaLigada extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -109,31 +135,7 @@ class ListaLigada extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(1)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "Θ(1)",
+                        "Θ(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -156,82 +158,9 @@ class ListaLigada extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
+                        color: Colors.greenAccent,
                         border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "O(n)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "O(n)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "Θ(1)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -251,13 +180,88 @@ class ListaLigada extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "O(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "O(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "O(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(
                   height: 15,
                 ),
                 Text(
-                  listaLigadaModel.texto1,
+                  arrayModel.texto1,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -266,7 +270,7 @@ class ListaLigada extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  listaLigadaModel.texto2,
+                  arrayModel.texto2,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -275,7 +279,7 @@ class ListaLigada extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  listaLigadaModel.texto3,
+                  arrayModel.texto3,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -286,7 +290,7 @@ class ListaLigada extends StatelessWidget {
                 GestureDetector(
                   onTap: () async {
                     const url =
-                        'https://en.wikipedia.org/wiki/Linked_list#Singly_linked_lists';
+                        'https://en.wikipedia.org/wiki/Array_data_structure';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -302,7 +306,7 @@ class ListaLigada extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Lista Ligada saiba mais',
+                                'Array saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

@@ -1,12 +1,12 @@
-import 'package:big_memo/model/lista_dup_model.dart';
-import 'package:big_memo/widget/complexy_ed.dart';
+import 'package:big_memo/src/model/lista_ligada_model.dart';
+import 'package:big_memo/src/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ListaDup extends StatelessWidget {
-  ListaDup({Key? key}) : super(key: key);
+class ListaLigada extends StatelessWidget {
+  ListaLigada({Key? key}) : super(key: key);
 
-  final listaDupModel = ListaDupModel('', '', '');
+  final listaLigadaModel = ListaLigadaModel('', '', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class ListaDup extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Lista Duplamente Ligada',
+                  'Lista Ligada',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -257,7 +257,7 @@ class ListaDup extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  listaDupModel.texto1,
+                  listaLigadaModel.texto1,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -266,7 +266,7 @@ class ListaDup extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  listaDupModel.texto2,
+                  listaLigadaModel.texto2,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -275,7 +275,7 @@ class ListaDup extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  listaDupModel.texto3,
+                  listaLigadaModel.texto3,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -286,7 +286,7 @@ class ListaDup extends StatelessWidget {
                 GestureDetector(
                   onTap: () async {
                     const url =
-                        'https://en.wikipedia.org/wiki/Doubly_linked_list';
+                        'https://en.wikipedia.org/wiki/Linked_list#Singly_linked_lists';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -302,7 +302,7 @@ class ListaDup extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Lista Duplamente Encadeada saiba mais',
+                                'Lista Ligada saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

@@ -1,12 +1,12 @@
-import 'package:big_memo/model/tree_rn_model.dart';
-import 'package:big_memo/widget/complexy_ed.dart';
+import 'package:big_memo/src/model/lista_dup_model.dart';
+import 'package:big_memo/src/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class TreeRN extends StatelessWidget {
-  TreeRN({Key? key}) : super(key: key);
+class ListaDup extends StatelessWidget {
+  ListaDup({Key? key}) : super(key: key);
 
-  final treeRNModel = TreeRNModel('', '', '');
+  final listaDupModel = ListaDupModel('', '', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class TreeRN extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Arvore Rubro Negro',
+                  'Lista Duplamente Ligada',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,8 +46,9 @@ class TreeRN extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -59,7 +60,32 @@ class TreeRN extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "Θ(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "Θ(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -83,7 +109,7 @@ class TreeRN extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "Θ(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -107,31 +133,7 @@ class TreeRN extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "Θ(log(n))",
+                        "Θ(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -154,8 +156,9 @@ class TreeRN extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -167,7 +170,32 @@ class TreeRN extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "O(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "O(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -191,7 +219,7 @@ class TreeRN extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
+                        "Θ(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -215,31 +243,7 @@ class TreeRN extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(log(n))",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        border: Border.all(color: Colors.green, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "Θ(log(n))",
+                        "O(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -253,7 +257,7 @@ class TreeRN extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  treeRNModel.texto1,
+                  listaDupModel.texto1,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -262,7 +266,7 @@ class TreeRN extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  treeRNModel.texto2,
+                  listaDupModel.texto2,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -271,7 +275,7 @@ class TreeRN extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  treeRNModel.texto3,
+                  listaDupModel.texto3,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -282,7 +286,7 @@ class TreeRN extends StatelessWidget {
                 GestureDetector(
                   onTap: () async {
                     const url =
-                        'https://en.wikipedia.org/wiki/Red%E2%80%93black_tree';
+                        'https://en.wikipedia.org/wiki/Doubly_linked_list';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -298,7 +302,7 @@ class TreeRN extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Arvore Rubro Negro saiba mais',
+                                'Lista Duplamente Encadeada saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

@@ -1,12 +1,12 @@
-import 'package:big_memo/model/selection_sort_model.dart';
-import 'package:big_memo/widget/complexy.dart';
+import 'package:big_memo/src/model/merge_sort_model.dart';
+import 'package:big_memo/src/widget/complexy.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SelectionSort extends StatelessWidget {
-  SelectionSort({Key? key}) : super(key: key);
+class MergeSort extends StatelessWidget {
+  MergeSort({Key? key}) : super(key: key);
 
-  final selectionModel = SelectionSortModel('');
+  final mergeModel = MergeSortModel('');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class SelectionSort extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Selection Sort',
+                  'Merge Sort',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,8 +46,8 @@ class SelectionSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.redAccent,
-                        border: Border.all(color: Colors.redAccent, width: 3.0),
+                        color: Colors.orange,
+                        border: Border.all(color: Colors.orange, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -59,7 +59,7 @@ class SelectionSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Ω(n^2)",
+                        "Ω(n log(n))",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -70,8 +70,8 @@ class SelectionSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.redAccent,
-                        border: Border.all(color: Colors.redAccent, width: 3.0),
+                        color: Colors.orange,
+                        border: Border.all(color: Colors.orange, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -83,7 +83,7 @@ class SelectionSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n^2)",
+                        "Θ(n log(n))",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -94,8 +94,8 @@ class SelectionSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.redAccent,
-                        border: Border.all(color: Colors.redAccent, width: 3.0),
+                        color: Colors.orange,
+                        border: Border.all(color: Colors.orange, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -107,7 +107,7 @@ class SelectionSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(n^2)",
+                        "O(n log(n))",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -121,7 +121,7 @@ class SelectionSort extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  selectionModel.texto,
+                  mergeModel.texto,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -130,13 +130,13 @@ class SelectionSort extends StatelessWidget {
                   height: 15,
                 ),
                 Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif'),
+                    'https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif'),
                 const SizedBox(
                   height: 15,
                 ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://en.wikipedia.org/wiki/Selection_sort';
+                    const url = 'https://en.wikipedia.org/wiki/Merge_sort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -152,7 +152,7 @@ class SelectionSort extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Selection Sort saiba mais',
+                                'Merge Sort saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

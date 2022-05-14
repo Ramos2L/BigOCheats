@@ -1,12 +1,12 @@
-import 'package:big_memo/model/heap_sort_model.dart';
+import 'package:big_memo/src/model/quick_sort_model.dart';
+import 'package:big_memo/src/widget/complexy.dart';
 import 'package:flutter/material.dart';
-import 'package:big_memo/widget/complexy.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class HeapSort extends StatelessWidget {
-  HeapSort({Key? key}) : super(key: key);
+class QuickSort extends StatelessWidget {
+  QuickSort({Key? key}) : super(key: key);
 
-  final heapModel = HeapSortModel('', '');
+  final quickModel = QuickSortModel('');
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +28,13 @@ class HeapSort extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Heap Sort',
+                  'Quick Sort',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
+                ),
+                const SizedBox(
+                  height: 15,
                 ),
                 const SizedBox(
                   height: 10,
@@ -94,8 +97,8 @@ class HeapSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.orange,
-                        border: Border.all(color: Colors.orange, width: 3.0),
+                        color: Colors.redAccent,
+                        border: Border.all(color: Colors.redAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -107,7 +110,7 @@ class HeapSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n log(n))",
+                        "O(n^2)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -121,13 +124,7 @@ class HeapSort extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  heapModel.texto,
-                  style: const TextStyle(
-                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-                  textAlign: TextAlign.justify,
-                ),
-                Text(
-                  heapModel.texto2,
+                  quickModel.texto,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -136,13 +133,13 @@ class HeapSort extends StatelessWidget {
                   height: 15,
                 ),
                 Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif'),
+                    'https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif'),
                 const SizedBox(
                   height: 15,
                 ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://en.wikipedia.org/wiki/Heapsort';
+                    const url = 'https://en.wikipedia.org/wiki/Quicksort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -158,7 +155,7 @@ class HeapSort extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Heap Sort saiba mais',
+                                'Quick Sort saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

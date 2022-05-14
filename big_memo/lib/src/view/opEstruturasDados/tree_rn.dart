@@ -1,12 +1,12 @@
-import 'package:big_memo/model/avl_model.dart';
-import 'package:big_memo/widget/complexy_ed.dart';
+import 'package:big_memo/src/model/tree_rn_model.dart';
+import 'package:big_memo/src/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AVL extends StatelessWidget {
-  AVL({Key? key}) : super(key: key);
+class TreeRN extends StatelessWidget {
+  TreeRN({Key? key}) : super(key: key);
 
-  final avlModel = AVLModel('', '', '');
+  final treeRNModel = TreeRNModel('', '', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class AVL extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'AVL',
+                  'Arvore Rubro Negro',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -253,7 +253,7 @@ class AVL extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  avlModel.texto1,
+                  treeRNModel.texto1,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -262,7 +262,7 @@ class AVL extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  avlModel.texto2,
+                  treeRNModel.texto2,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -271,7 +271,7 @@ class AVL extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  avlModel.texto3,
+                  treeRNModel.texto3,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -298,7 +298,7 @@ class AVL extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'AVL saiba mais',
+                                'Arvore Rubro Negro saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

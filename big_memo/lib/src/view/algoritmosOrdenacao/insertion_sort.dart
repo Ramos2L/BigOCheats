@@ -1,12 +1,12 @@
-import 'package:big_memo/model/couting_sort_model.dart';
-import 'package:big_memo/widget/complexy.dart';
+import 'package:big_memo/src/model/insertion_sort_model.dart';
+import 'package:big_memo/src/widget/complexy.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CountingSort extends StatelessWidget {
-  CountingSort({Key? key}) : super(key: key);
+class InsertionSort extends StatelessWidget {
+  InsertionSort({Key? key}) : super(key: key);
 
-  final coutingModel = CoutingSortModel('', '');
+  final insertionModel = InsertionSortModel('');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class CountingSort extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Counting Sort',
+                  'Insertion Sort',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,9 +46,8 @@ class CountingSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.orange,
+                        border: Border.all(color: Colors.orange, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -60,7 +59,7 @@ class CountingSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Ω(n+k)",
+                        "Ω(n)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -71,9 +70,8 @@ class CountingSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.redAccent,
+                        border: Border.all(color: Colors.redAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -85,7 +83,7 @@ class CountingSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n+k)",
+                        "Θ(n^2)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -96,9 +94,8 @@ class CountingSort extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.redAccent,
+                        border: Border.all(color: Colors.redAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -110,7 +107,7 @@ class CountingSort extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n+k)",
+                        "O(n^2)",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -124,7 +121,7 @@ class CountingSort extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  coutingModel.texto,
+                  insertionModel.texto,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -132,9 +129,14 @@ class CountingSort extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
+                Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif'),
+                const SizedBox(
+                  height: 15,
+                ),
                 GestureDetector(
                   onTap: () async {
-                    const url = 'https://en.wikipedia.org/wiki/Counting_sort';
+                    const url = 'https://en.wikipedia.org/wiki/Insertion_sort';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -150,7 +152,7 @@ class CountingSort extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Counting Sort saiba mais',
+                                'Insertion Sort saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)
