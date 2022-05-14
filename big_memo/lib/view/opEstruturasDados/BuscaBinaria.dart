@@ -1,12 +1,12 @@
-import 'package:big_memo/model/array_model.dart';
+import 'package:big_memo/model/busca_binaria_model.dart';
 import 'package:big_memo/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Array extends StatelessWidget {
-  Array({Key? key}) : super(key: key);
+class BuscaBinaria extends StatelessWidget {
+  BuscaBinaria({Key? key}) : super(key: key);
 
-  final arrayModel = ArrayModel('', '', '');
+  final buscaBinariaModel = BuscaBinariaModel('', '', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class Array extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Array',
+                  'Busca Binaria',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -46,9 +46,8 @@ class Array extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -60,7 +59,7 @@ class Array extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(1)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -71,9 +70,8 @@ class Array extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -85,7 +83,7 @@ class Array extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -96,9 +94,8 @@ class Array extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -110,7 +107,7 @@ class Array extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -121,9 +118,8 @@ class Array extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        color: Colors.green,
+                        border: Border.all(color: Colors.green, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -135,7 +131,7 @@ class Array extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n)",
+                        "Θ(log(n))",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -158,9 +154,9 @@ class Array extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.greenAccent,
+                        color: Colors.yellowAccent,
                         border:
-                            Border.all(color: Colors.greenAccent, width: 3.0),
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -172,7 +168,7 @@ class Array extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(1)",
+                        "O(n)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -261,7 +257,7 @@ class Array extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  arrayModel.texto1,
+                  buscaBinariaModel.texto1,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -270,7 +266,7 @@ class Array extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  arrayModel.texto2,
+                  buscaBinariaModel.texto2,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -279,7 +275,7 @@ class Array extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  arrayModel.texto3,
+                  buscaBinariaModel.texto3,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -290,7 +286,7 @@ class Array extends StatelessWidget {
                 GestureDetector(
                   onTap: () async {
                     const url =
-                        'https://en.wikipedia.org/wiki/Array_data_structure';
+                        'https://en.wikipedia.org/wiki/Binary_search_tree';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -306,7 +302,7 @@ class Array extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Array saiba mais',
+                                'Busca Binaria saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

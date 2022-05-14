@@ -1,12 +1,12 @@
-import 'package:big_memo/model/array_model.dart';
+import 'package:big_memo/model/stack_model.dart';
 import 'package:big_memo/widget/complexy_ed.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Array extends StatelessWidget {
-  Array({Key? key}) : super(key: key);
+class StackPage extends StatelessWidget {
+  StackPage({Key? key}) : super(key: key);
 
-  final arrayModel = ArrayModel('', '', '');
+  final stackModel = StackModel('', '', '', '', '', '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class Array extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Array',
+                  'Stack',
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.left,
@@ -43,6 +43,56 @@ class Array extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "Θ(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "Θ(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
@@ -71,9 +121,9 @@ class Array extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
+                        color: Colors.greenAccent,
                         border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -85,57 +135,7 @@ class Array extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "Θ(n)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "Θ(n)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "Θ(n)",
+                        "Θ(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -155,6 +155,56 @@ class Array extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "O(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.yellowAccent,
+                        border:
+                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black,
+                            offset: Offset(1, 3),
+                          )
+                        ],
+                      ),
+                      child: const Text(
+                        "O(n)",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                            fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
@@ -183,9 +233,9 @@ class Array extends StatelessWidget {
                     Container(
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
+                        color: Colors.greenAccent,
                         border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
+                            Border.all(color: Colors.greenAccent, width: 3.0),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(5.0)),
                         boxShadow: const [
@@ -197,57 +247,7 @@ class Array extends StatelessWidget {
                         ],
                       ),
                       child: const Text(
-                        "O(n)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "O(n)",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                            fontSize: 14),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.yellowAccent,
-                        border:
-                            Border.all(color: Colors.yellowAccent, width: 3.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(5.0)),
-                        boxShadow: const [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(1, 3),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        "O(n)",
+                        "O(1)",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Roboto',
@@ -261,7 +261,7 @@ class Array extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  arrayModel.texto1,
+                  stackModel.texto1,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -270,7 +270,7 @@ class Array extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  arrayModel.texto2,
+                  stackModel.texto2,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -279,7 +279,37 @@ class Array extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  arrayModel.texto3,
+                  stackModel.texto3,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto1,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto5,
+                  style: const TextStyle(
+                      color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                  textAlign: TextAlign.justify,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  stackModel.texto6,
                   style: const TextStyle(
                       color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
                   textAlign: TextAlign.justify,
@@ -290,7 +320,7 @@ class Array extends StatelessWidget {
                 GestureDetector(
                   onTap: () async {
                     const url =
-                        'https://en.wikipedia.org/wiki/Array_data_structure';
+                        'https://en.wikipedia.org/wiki/Stack_(abstract_data_type)';
                     if (await canLaunchUrl(Uri.parse(url))) {
                       await launchUrl(Uri.parse(url));
                     } else {
@@ -306,7 +336,7 @@ class Array extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                'Array saiba mais',
+                                'Stack saiba mais',
                                 style: TextStyle(color: Colors.black),
                               ),
                               Icon(Icons.call_made_outlined)

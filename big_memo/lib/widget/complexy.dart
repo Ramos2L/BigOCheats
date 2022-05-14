@@ -91,7 +91,7 @@ class Complexy extends StatelessWidget {
               child: const Text(
                 "Worst",
                 style: TextStyle(
-                    color: Colors.white, fontFamily: 'Roboto', fontSize: 14),
+                    color: Colors.black, fontFamily: 'Roboto', fontSize: 14),
                 textAlign: TextAlign.center,
               ),
             ),
