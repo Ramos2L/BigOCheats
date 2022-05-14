@@ -148,10 +148,7 @@ class _HomeState extends State<Home> {
         actions: <Widget>[
           IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Detalhes()),
-              );
+              Navigator.of(context).pushNamed('/detalhes');
             },
             icon: const Icon(Icons.tune),
           ),
@@ -177,10 +174,7 @@ class _HomeState extends State<Home> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Introducao()),
-                );
+                Navigator.of(context).pushNamed('/introducao');
               },
               child: Card(
                 clipBehavior: Clip.antiAlias,

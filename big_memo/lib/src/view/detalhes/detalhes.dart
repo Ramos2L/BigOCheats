@@ -38,10 +38,7 @@ class Detalhes extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Sobre()),
-                );
+                Navigator.of(context).pushNamed('/sobre');
               },
               child: Card(
                 clipBehavior: Clip.antiAlias,
