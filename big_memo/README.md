@@ -1,6 +1,6 @@
 # big_memo
 
-A new Flutter project.
+Flutter project in Flutter.
 
 ## Getting Started
 
