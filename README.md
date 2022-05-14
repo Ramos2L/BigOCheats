@@ -13,6 +13,9 @@ Aplicativo para estudo de Big-O e complexidade de algoritmos, criado com a final
   <img src="https://img.shields.io/badge/Flutter-v.2.10.4-green"/>
 </div>
 
+<h1 align="center"> 📲 Baixe o App </h1>
+<p> Link de Download do app: </p>
+https://drive.google.com/drive/folders/1YGSOLZKcwQX1XB5bgHdk0Cd3khVOlDaa?usp=sharing
 
 <h1 align="center"> 🦾 Telas Demonstração </h1>
 <div align="center">
