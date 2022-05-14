@@ -3,7 +3,7 @@
 <!--Versions-->
 
 <h1 align="center"> 👩‍💻 Introdução </h1>
-Aplicativo para estudo de Big-O e complexidade de algoritmos, criado com a finalidade de memorizar e fácil acesso as complexidades dos algoritmos mais utilizados pela ciência da computação. 
+Aplicativo para estudo de Big-O e complexidade de algoritmos, criado com a finalidade de memorizar e fácil acesso as complexidades dos algoritmos mais utilizados pela ciência da computação. *Ressaltar que o app ainda está em desenvolvimento.
 
 <h1 align="center"> 🛠 Tecnologias </h1>
 
