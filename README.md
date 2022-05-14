@@ -28,3 +28,8 @@ Aplicativo para estudo de Big-O e complexidade de algoritmos, criado com a final
 
 Precisa de ajuda ou teve interesse/sugestões sobre qualquer  parte do app. entre em contato e vamos bater um papo sobre
 https://www.linkedin.com/in/ramos-lucas/
+
+<h1 align="center"> 🤝 Referencias </h1>
+
+Site Utilizado para retirar os dados necessários para a complexidade de cada Algoritmo
+https://www.bigocheatsheet.com/
