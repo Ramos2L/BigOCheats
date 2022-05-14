@@ -11,7 +11,7 @@ import 'package:big_memo/view/detalhes/detalhes.dart';
 import 'package:big_memo/view/home/items_algoritmos_ordenacao.dart';
 import 'package:big_memo/view/home/items_estrutura_dados.dart';
 import 'package:big_memo/view/introducao/introducao.dart';
-import 'package:big_memo/view/opEstruturasDados/BuscaBinaria.dart';
+import 'package:big_memo/view/opEstruturasDados/busca_binaria.dart';
 import 'package:big_memo/view/opEstruturasDados/array.dart';
 import 'package:big_memo/view/opEstruturasDados/avl.dart';
 import 'package:big_memo/view/opEstruturasDados/btree.dart';
