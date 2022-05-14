@@ -154,90 +154,94 @@ class _HomeState extends State<Home> {
         backgroundColor: const Color(0xFF262a38),
       ),
       backgroundColor: const Color(0xFF4b5b6b),
-      body: Container(
-        padding: const EdgeInsets.all(15),
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              'Introdução',
-              style: TextStyle(
-                  color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-              textAlign: TextAlign.left,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushNamed('/introducao');
-              },
-              child: Card(
-                clipBehavior: Clip.antiAlias,
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: const Text('Algoritmos e Complexidade Big-O'),
-                      subtitle: Text(
-                        'Uma breve introdução sobre Algoritmos e tudo sobre Big-O.',
-                        style: TextStyle(color: Colors.black.withOpacity(0.6)),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(15),
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Text(
+                'Introdução',
+                style: TextStyle(
+                    color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                textAlign: TextAlign.left,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/introducao');
+                },
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        title: const Text('Algoritmos e Complexidade Big-O'),
+                        subtitle: Text(
+                          'Uma breve introdução sobre Algoritmos e tudo sobre Big-O.',
+                          style:
+                              TextStyle(color: Colors.black.withOpacity(0.6)),
+                        ),
                       ),
-                    ),
-                    Image.asset(
-                      'assets/images/bigo.png',
-                      height: 200,
-                      width: 500,
-                    )
-                  ],
+                      Image.asset(
+                        'assets/images/bigo.png',
+                        height: 200,
+                        width: 500,
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'Operações em Estrutura de Dados',
-              style: TextStyle(
-                  color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-              textAlign: TextAlign.left,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Consumer<HomeControllerEstruturaDados>(
-                builder: ((context, value, child) {
-              return HorizontalCardPager(
-                onPageChanged: (page) => debugPrint("selected : $page"),
-                onSelectedItem: (page) {
-                  homeControllerEstruturaDados.controlePageEstruturaDados(page);
-                },
-                items: itemsEstruturaDados.itemsEstruturaDados,
-              );
-            })),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'Algoritmos de Ordenação',
-              style: TextStyle(
-                  color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
-              textAlign: TextAlign.left,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Consumer<HomeControllerSort>(builder: ((context, value, child) {
-              return HorizontalCardPager(
-                onPageChanged: (page) => debugPrint("selected : $page"),
-                onSelectedItem: (page) {
-                  homeControllerSort.controlePageSort(page);
-                },
-                items: itemsAlgoritmosOrdenacao.itemsAlgoritmosOrdenacao,
-              );
-            }))
-          ],
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'Operações em Estrutura de Dados',
+                style: TextStyle(
+                    color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                textAlign: TextAlign.left,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Consumer<HomeControllerEstruturaDados>(
+                  builder: ((context, value, child) {
+                return HorizontalCardPager(
+                  onPageChanged: (page) => debugPrint("selected : $page"),
+                  onSelectedItem: (page) {
+                    homeControllerEstruturaDados
+                        .controlePageEstruturaDados(page);
+                  },
+                  items: itemsEstruturaDados.itemsEstruturaDados,
+                );
+              })),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'Algoritmos de Ordenação',
+                style: TextStyle(
+                    color: Colors.white, fontFamily: 'Roboto', fontSize: 20),
+                textAlign: TextAlign.left,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Consumer<HomeControllerSort>(builder: ((context, value, child) {
+                return HorizontalCardPager(
+                  onPageChanged: (page) => debugPrint("selected : $page"),
+                  onSelectedItem: (page) {
+                    homeControllerSort.controlePageSort(page);
+                  },
+                  items: itemsAlgoritmosOrdenacao.itemsAlgoritmosOrdenacao,
+                );
+              }))
+            ],
+          ),
         ),
       ),
     );
