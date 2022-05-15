@@ -1,5 +1,10 @@
 <h1 align="center"> BigOCheats </h1>
 
+<div align="center">
+  <h2> BIG </h2>
+  <img height="250em" src="https://user-images.githubusercontent.com/58201578/168456175-7a238659-9736-4e9e-8f9b-0d074b627577.png"/>
+  <h2> MEMO </h2>
+</div>
 <!--Versions-->
 
 <h1 align="center"> 👩‍💻 Introdução </h1>
