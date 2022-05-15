@@ -1,26 +1,4 @@
-import 'package:big_memo/src/controller/home_controller.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/bubble_sort.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/counting_sort.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/cube_sort.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/heap_sort.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/insertion_sort.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/merge_sort.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/quick_sort.dart';
-import 'package:big_memo/src/view/algoritmosOrdenacao/selection_sort.dart';
-import 'package:big_memo/src/view/home/items_algoritmos_ordenacao.dart';
-import 'package:big_memo/src/view/home/items_estrutura_dados.dart';
-import 'package:big_memo/src/view/opEstruturasDados/array.dart';
-import 'package:big_memo/src/view/opEstruturasDados/avl.dart';
-import 'package:big_memo/src/view/opEstruturasDados/btree.dart';
-import 'package:big_memo/src/view/opEstruturasDados/busca_binaria.dart';
-import 'package:big_memo/src/view/opEstruturasDados/lista_dup.dart';
-import 'package:big_memo/src/view/opEstruturasDados/lista_ligada.dart';
-import 'package:big_memo/src/view/opEstruturasDados/stack.dart';
-import 'package:big_memo/src/view/opEstruturasDados/tree_rn.dart';
-import 'package:flutter/material.dart';
-import 'package:horizontal_card_pager/card_item.dart';
-import 'package:horizontal_card_pager/horizontal_card_pager.dart';
-import 'package:provider/provider.dart';
+import 'package:big_memo/src/services/imports_pages.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
